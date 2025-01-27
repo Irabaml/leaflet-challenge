@@ -62,7 +62,7 @@ d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geoj
         return "#ffcce0";
     }
        
-
+  }
   // This function determines the radius of the earthquake marker based on its magnitude.
   function getRadius(magnitude) {
     if(magnitude === 0){
@@ -107,20 +107,11 @@ d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geoj
 
     // Initialize depth intervals and colors for the legend
     let depths = [-10, 10, 30, 50, 70, 90];
-   /* let colors = [
-      "#98ee00",
-      "#d4ee00",
-      "#eecc00",
-      "#ee9c00",
-      "#ea822c",
-      "#ea2c2c"
-    ];*/
+ 
     let colors = ["#ffccff", "#e6ffff", "#ffffcc", "#cceeff", "#ccffcc", "#ffcce0"];
 
     // Loop through our depth intervals to generate a label with a colored square for each interval.
-   /* for (let i = 0; i < depths.length; i++) {
-      div.innerHTML += `<i style="background: ${colors[i]}"></i> ${depths[i]}${depths[i + 1] ? `&ndash;${depths[i + 1]}<br>` : "+"}`;
-  }*/
+   
       for (let i = 0; i < depths.length; i++) {
         div.innerHTML +=
             `<i style="
